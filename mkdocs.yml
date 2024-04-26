@@ -1,0 +1,49 @@
+site_name: cloud
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - mkdocs-jupyter
+  # - plotly
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      
+
+# markdown_extensions:
+#   - pymdownx.superfences:
+#       custom_fences:
+#         - name: plotly
+#           class: mkdocs-plotly
+#           format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
+
+
+
+
+nav:
+  - Section:
+    - Page 1: section/1.md
+    - Page n: section/2.md
+  - Home:
+    - Page 1: home/1.md
+    - Page n: home/2.md
+
+  # - Notebook: 
+  #   - Page 1: code/notebook.ipynb
