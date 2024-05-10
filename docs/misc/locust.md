@@ -1,10 +1,20 @@
-# Welcome to MkDocs
+# Locust :: Load Testing
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+- [Website](https://locust.io/)
+- [Source code](https://github.com/locustio/locust)
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
+## Basic Setup
+
+```shell
+pip install locust
+locust --help
+locust -f main.py --headless --users 10 --spawn-rate 1 --runtime 200s -H http://api-host
+locust -f main.py --users 10 --spawn-rate 1 --runtime 200s -H http://api-host
+
+
+```
+
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
@@ -29,7 +39,6 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 
-try soemthing
 
 ``` yaml
 theme:
@@ -62,3 +71,25 @@ theme:
       return 0;
     }
     ```
+
+
+
+/// details | 👀 Full file preview
+
+<!-- //// tab | Python 3.10+ -->
+
+```Python
+{!./docs_code/snippets/tutorial_001.py!}
+```
+
+<!-- //// -->
+
+<!-- //// tab | Python 3.7+
+
+```Python
+{!./docs_code/snippets/tutorial_002.py!}
+```
+
+//// -->
+
+///
