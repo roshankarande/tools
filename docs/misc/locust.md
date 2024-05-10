@@ -26,20 +26,22 @@ locust -f main.py --users 10 --spawn-rate 1 --runtime 200s -H http://api-host
 
 /// details | 👀 Example
 
-//// tab | Simple Example
-
+//// tab | Example 01
 ```python
 {!./docs_code/snippets/misc/locust_001.py!}
 ```
-
 ////
 
-//// tab | Complex Example
-
-```Python
+//// tab | Example 02
+```python
 {!./docs_code/snippets/misc/locust_002.py!}
 ```
+////
 
+//// tab | Example 03
+```python
+{!./docs_code/snippets/misc/locust_003.py!}
+```
 ////
 
 ///
