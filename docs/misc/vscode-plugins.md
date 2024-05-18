@@ -2,6 +2,12 @@
 crates
 codelldb
 rust analyzer
+todo tree
+OpenAPI (Swagger) Editor
+go
+c++
+python
+rest client
 ```
 
 
