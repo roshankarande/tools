@@ -43,5 +43,7 @@ sudo apt-get install cuda-toolkit
 
 sudo apt install nvidia-cuda-toolkit
 
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions
+# ENV VAR SET
 
 ```
