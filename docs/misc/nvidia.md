@@ -17,6 +17,9 @@ https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&D
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#meta-packages
 ```
 
-
+```
 nvidia-smi
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#prepare-wsl
+```
+
+https://learn.microsoft.com/en-us/windows/wsl/basic-commands
