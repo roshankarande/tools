@@ -17,6 +17,11 @@ evcxr_jupyter --install
 
 jupyter notebook --no-browser # run this and then open browser or also in vscode will have to enter the url
 
+
+# TRY THIS OUT
+https://github.com/evcxr/evcxr/blob/main/evcxr_jupyter/samples/evcxr_jupyter_tour.ipynb
+
+# if you want to start with vscode... manually start juypter notebook ... and then enter the url while selecting kernel
 ```
 
 
