@@ -19,3 +19,4 @@ https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#meta-packages
 
 
 nvidia-smi
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#prepare-wsl
