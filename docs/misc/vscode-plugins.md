@@ -8,6 +8,14 @@ go
 c++
 python
 rest client
+remote-ssh
+wsl
+redis
+project-dashboard
+peacock
+todo-tree
+pretiffy-json
+indent rainbow
 ```
 
 
