@@ -31,6 +31,8 @@ jupyter notebook --generate-config
 # c.NotebookApp.ip = 'localhost'
 
 # TODO :: Create a docker container for evcrx and jupyter
+# ADD :: python as well to it
+
 # https://hub.docker.com/r/hgfkeep/rust-jupyter
 # or docker compose ... and stuff for evcxr_repl // especially jupyter
 
