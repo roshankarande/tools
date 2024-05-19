@@ -1,4 +1,13 @@
 ```
+You should be able to use any of the listed mirrors by adding a line to your /etc/apt/sources.list like this:
+deb http://cz.archive.ubuntu.com/ubuntu noble main universe
+sudo apt update
+sudo apt install gcc-14
+gcc --version
+
+```
+
+```
 https://www.cpuid.com/softwares/cpu-z.html
 https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html
 https://docs.nvidia.com/cuda/wsl-user-guide/contents.html
