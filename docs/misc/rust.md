@@ -1,6 +1,8 @@
 Install
 
 ```
+
+https://github.com/astral-sh/uv -> install
 evcxr_repl - A Rust REPL
 evcxr - Common library shared by the above crates, may be useful for other purposes.
 
