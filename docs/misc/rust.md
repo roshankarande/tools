@@ -1,42 +1,78 @@
-Install
+# Install
 
+* [binstall](https://github.com/cargo-bins/cargo-binstall)
+/// details | 👀 Instructions
+
+```sh
+# linux
+curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+# windows
+Set-ExecutionPolicy Unrestricted -Scope Process; iex (iwr "https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.ps1").Content
 ```
-
-https://github.com/astral-sh/uv -> install
-evcxr_repl - A Rust REPL
-evcxr - Common library shared by the above crates, may be useful for other purposes.
+///
 
 
-https://github.com/evcxr/evcxr
+* [uv](https://github.com/astral-sh/uv) 
+/// details | 👀 Instructions
 
+```sh
+# linux
+curl -LsSf https://astral.sh/uv/install.sh | sh 
+
+# windows
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+///
+
+
+* [evcxr_repl](https://github.com/evcxr/evcxr)
+* [evcxr_jupyter](https://github.com/evcxr/evcxr)
+
+/// details | 👀 Instructions
+
+//// tab | install
+```sh
 rustup component add rust-src
 sudo apt install jupyter-notebook
-
 cargo binstall evcxr_jupyter
-# cargo binstall evcxr  --- install only if need be
 cargo binstall evcxr_repl
 evcxr_jupyter --install
-
-jupyter notebook --no-browser # run this and then open browser or also in vscode will have to enter the url
-
-
-# TRY THIS OUT
-https://github.com/evcxr/evcxr/blob/main/evcxr_jupyter/samples/evcxr_jupyter_tour.ipynb
-
-# if you want to start with vscode... manually start juypter notebook ... and then enter the url while selecting kernel
 ```
+////
 
-
-```
+//// tab | config
+```sh
 jupyter notebook --generate-config
 
 # open it and add the following
-
  c.NotebookApp.token = ''
  c.NotebookApp.password = u''
 # c.NotebookApp.open_browser = True
 # c.NotebookApp.ip = 'localhost'
+```
+////
 
+//// tab | debug
+```sh
+# jupyter notebook mode
+jupyter notebook --no-browser
+# either via browser or via vscode - manually enter the url
+
+
+# repl mode
+evcxr
+>> :dep num_cpus
+    Compiling num_cpus v1.16.0
+>> num_cpus::get()
+12
+
+```
+////
+
+
+//// tab | todo
+```sh
 # TODO :: Create a docker container for evcrx and jupyter
 # ADD :: python as well to it
 
@@ -51,13 +87,20 @@ services:
     command: start-notebook.sh --NotebookApp.token=''
 
 ```
+////
+///
 
 
-```rust
-evcxr
->> :dep num_cpus
-    Compiling num_cpus v1.16.0
->> num_cpus::get()
-12
+* rustup doc - offline doc
+/// details | 👀 Instructions
 
+```sh
+# wsl
+sudo apt-get install -y xdg-utils # https://github.com/4U6U57/wsl-open
+
+# .bashrc :: add :: 
+export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+rustup doc # should work now
 ```
+///
+

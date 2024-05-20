@@ -59,7 +59,15 @@ nav:
     - Page n: section/2.md
   - Misc:
     - locust: misc/locust.md
-    - Page n: misc/2.md
+    - docker: misc/docker.md
+    - clis: misc/clis.md
+    - rust: misc/rust.md
+    - nvidia: misc/nvidia.md
+    - vscode: misc/vscode.md
+    - gcc/g++: misc/gcc_g++.md
+    - wsl: misc/wsl.md
+    - software: misc/software.md
+    # - Page n: misc/2.md
 
   # - Notebook: 
   #   - Page 1: code/notebook.ipynb
