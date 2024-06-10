@@ -67,6 +67,7 @@ nav:
     - gcc/g++: misc/gcc_g++.md
     - wsl: misc/wsl.md
     - software: misc/software.md
+    - telemetery: misc/telemetery.md
     # - Page n: misc/2.md
 
   # - Notebook: 
