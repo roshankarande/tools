@@ -22,6 +22,7 @@ locust -f main.py --headless --users 10 --spawn-rate 1 --runtime 200s -H http://
 locust -f main.py --users 10 --spawn-rate 1 --runtime 200s -H http://api-host
 ```
 
+
 ## Code Snippets
 
 /// details | 👀 Example
