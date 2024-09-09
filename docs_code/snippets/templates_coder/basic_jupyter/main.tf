@@ -37,19 +37,27 @@ resource "coder_agent" "main" {
 
     # Install the latest code-server.
     # Append "--version x.x.x" to install a specific version of code-server.
-    curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
+    # curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
 
+    # source $HOME/.venv/bin/activate
+    
+    
+    # $HOME/.cargo/bin/uvx --from jupyter-core --with jupyter jupyter lab --ServerApp.token='' --ip='
+    # filebrowser --noauth --root /home/coder --port 13339 >/tmp/filebrowser.log 2>&1 &
     # Start code-server in the background.
     /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
 
-    # curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash filebrowser --noauth --root /home/coder --port 13339 >/tmp/filebrowser.log 2>&1 &
+    # $HOME/.cargo/bin/uv run ipython kernel install --user --name=venv
+    # $HOME/.cargo/bin/uv pip install jupyter
+    # $HOME/.venv/bin/jupyter lab --ServerApp.token='' --ip='*' >/tmp/code-server.log 2>&1 &
 
-    pip3 install jupyterlab --break-system-packages
-    $HOME/.local/bin/jupyter lab --ServerApp.token='' --ip='*'
+    # uv venv
+    
+    uv pip install jupyter
+    uv run ipython kernel install --user --name=venv
+
+    $HOME/.venv/bin/jupyter lab --ServerApp.token='' --ip='*' >/tmp/code-server.log 2>&1 &
   EOT
-
-
-
 
   # These environment variables allow you to make Git commits right away after creating a
   # workspace. Note that they take precedence over configuration defined in ~/.gitconfig!
@@ -224,7 +232,6 @@ resource "docker_container" "workspace" {
   }
 }
 
-
 resource "coder_app" "jupyter" {
   agent_id     = coder_agent.main.id
   slug         = "jupyter"
@@ -242,7 +249,6 @@ resource "coder_app" "jupyter" {
 }
 
 
-
 # resource "coder_app" "filebrowser" {
 #   agent_id     = coder_agent.main.id
 #   display_name = "file browser"
@@ -257,10 +263,4 @@ resource "coder_app" "jupyter" {
 #     interval  = 3
 #     threshold = 10
 #   }
-# }
-
-# module "filebrowser" {
-#   source   = "registry.coder.com/modules/filebrowser/coder"
-#   version  = "1.0.8"
-#   agent_id = coder_agent.main.id
 # }
