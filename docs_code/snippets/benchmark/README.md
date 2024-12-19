@@ -1,5 +1,5 @@
 
-# Running on the dataset
+## Running on the dataset
 
 ```
 cd C:\Users\admin\Desktop\target\genie\demo
@@ -14,11 +14,10 @@ python ./benchmark.py --runs 1 --backend "cpu" --verbose "true" --dataset "datas
 ```
 
 
-# Giving prompts explicitly
+## Giving prompts explicitly
+
 ```
-
 python ./benchmark.py --runs 1 --backend "cpu" --verbose "true" --prompt "What is the capital of America"
-
 ```
 
 
